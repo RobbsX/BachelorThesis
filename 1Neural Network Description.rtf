@@ -1,0 +1,22 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 30.4.2021\
+\
+Main document: TestBackprop.m\
+using: BackpropCE.m or BackpropXOR.m\
+\
+This is a first attempt to predict the Opening price of a share using basics of neural networks. \
+\
+The next step will be to figure out how to use CNN or even LSTM for forecasting. Till now there were problems in using the CNN for time series as it was mainly designed for image recognition. It might help to train a CNN model with 'one dimensional images', meaning reshaped sequences.\
+\
+That\'92s how X and Y could be merged together:\
+X(z, end)				Y(z)\
+1		2	3	4	5\
+		      offset = 5 \'97^\
+\
+However, to make coding easier, it is set to Y(z, end) predicts X(z).}

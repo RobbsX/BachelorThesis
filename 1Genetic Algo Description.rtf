@@ -1,0 +1,57 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww12800\viewh13660\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Genetic Algorithm\
+\
+optGen()\
+This is the main function for the optimization of the parameters used in FOREX per genetic algorithm. Here, some important settings are set, eg. the size of the population, and calls all function below. \
+\
+First, a population is created and the fitness of every individual is evaluated using Gfitness(). This will be repeated so long, until no prohibited value exists. These constraints are set in Gfitness(). Then, in a loop the population will be recombined, mutated and, again, evaluated. Furthermore, a termination condition ends the loop if the best results (=fit) converge, if termination is set to 1. And if no result will occur, optGen() will be called again (although that never occurs). \
+\
+\
+GgeneratePop()\
+Using the size of the population Popsz and and bit size of each parameter, a matrix with the length of [Popsz, 2] will be created. In the first column the chromosomes are stored. A chromosome has the length of each parameter\'92s bit size combined. The second column is reserved for the fit value.\
+\
+\
+Gfitness()\
+Every individual will be evaluated at once. For that, the long chromosome is split. Certain necessary constrains were set to avoid errors (line 49). If parameters are used which lie outside of the constrains, they will be punished by getting the fit value -infinitely. For evaluation, the myECSLTP function is being called and the \'82end\'91 value will be used as fit value. \
+\
+\
+Grecombine()\
+This function consists out of two parts: selection and crossover. \
+In the selection process a new population is build. For that, the individuals of the old generation are chosen randomly, but weighted using the roulette wheel. With that, the better individuals have better chances. \
+\
+In the crossover process children are made using the new generation. Two parents create two children. Wether a individual gets selected is decided randomly; each individual gets a random number and if that is below the set probability of crossing pCross, the individual will mate. \
+If there is an odd number of parents there are two options: Either a chromosome will be added randomly to become a parent or a chromosome will be deselected. This choice is made randomly. \
+After that, you can choose between a one- or two-point crossover. The one point crossover splits the parent\'92s chromosome on a random point and swaps them. With that, two childs are created. The two point crossover does the same with two splits. \
+\
+\
+Gmutate()\
+Each bit of each chromosome has a certain chance to be mutated (= toggled = from 1 to 0 and vv). The chance is set in advance. \
+\
+\
+Gbit2num()\
+Each parameter is coded binary, so a parameter is an array of zeros and ones with a certain length, eg. 7. This represents a size of 7 bits = 2^7 = 128. This function translates from bit to a real number. \
+\
+\
+Gdec()\
+This function takes a bit array and \'82translates\'91 it to a decimal number, considering the range in which the number can lie. \
+\
+\
+GcheckConstr()\
+Checks the following constraints within an upper and lower bound of a chromosome:\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1 \cf0 EMA1 < EMA2, EMA1\'85.smaller EMA of MACD, EMA2\'85.bigger EMA of MACD\
+EMAsl < EMA1, EMAsl\'85.EMA of the signal line\
+SL < TP, TP\'85Take Profit, SL\'85Stop Loss\
+
+\f0 Returns a boolean value = 1 if constraints are fulfilled. 0 if the chromosome is out of the constraints. \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+}
