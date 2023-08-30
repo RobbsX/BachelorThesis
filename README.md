@@ -5,7 +5,7 @@ MATLAB, Genetic Algorithms, Deep Neural Networks, Profiling, Parallel Computing,
 Reach out to get the full thesis as PDF. 
 
 ## About
-This Repo contains the code and some descriptions of my Bachelorthesis in Algorithmic Trading with Machine Learning. This Bachelor thesis evaluates some technical strategies of algorithmic trading and compares those with share price predictions using Deep Neural Networks. The daily data of 20 years of 100 shares of the S&P500 index is used which ensures solid backtesting for each strategy. 
+This Bachelor thesis evaluates some technical strategies of algorithmic trading and compares those with share price predictions using Deep Neural Networks. The daily data of 20 years of 100 shares of the S&P500 index is used which ensures solid backtesting for each strategy. 
 
 <img width="150" alt="image" src="https://github.com/RobbsX/BachelorThesis/assets/79597633/a9f0fa89-d287-4758-bae9-9e37d2ab1d5e">
 
