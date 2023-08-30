@@ -20,6 +20,13 @@ The result of this thesis is that technical strategies outperformed neural netwo
 
 This image visualises the clear winner in diversified long-term investing - buy and hold. 
 
+## Why this result? 
+On the one hand, the technical strategies are relatively simple ones, with the source being the internet. Thus, these strategies have been used extensively so that high returns are not possible anymore. However, considering the risk, for example with the Sharp Ratio, the reuslt of some strategies aren't too bad. 
+
+On the other hand, although the DNN is optimised, the number of hidden layers is set to two, and thus limits the genetic algorithm to find better solutions. the machine learning strategies rely on DNN, but perhaps a LSTM structure would perform better. 
+
+Furthermore, keep in mind that the genetic algorithm does not always find the global optimum. Although this problem was addressed, there still is a chance to have the parameters not fully optimised. 
+
 
 ## Technical Strategies
 The following strategies were used: MACD, Double7, and a simple and complex Bollinger Band Strategy. The parameters were choosen (1.) without optimising and (2.) by optimising using a Genetic Algorithm. 
