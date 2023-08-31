@@ -14,7 +14,9 @@ This image describes the methodology. Evaluating the performance of a technical 
 
 ## Result
 
-The result of this thesis is that technical strategies outperformed neural network strategies. However, no strategy could reliably outperform the share the strategy was applied on for all results. The best strategy, Double7, outperformed its underlying benchmark only 41 of 100 times. The average return a year for that strategy was 17% and for the underlying share 22,5%. Thus, for long term investing, the buy and hold strategy is preferable. 
+The result of this thesis is that technical strategies outperformed neural network strategies. However, no strategy could reliably outperform the share the strategy was applied on for all results. The best strategy, Double7, outperformed its underlying benchmark only 41 of 100 times. The average return per year for that strategy was 17% and 22.5% for the banchmark. That seems colse, however, the following graph shows that there is a higher chance of receiving higher returns with the buy and hold strategy. 
+
+_Thus, for long term investing without considering risk, the buy and hold strategy is preferable._
 
 <img width="600" alt="image" src="https://github.com/RobbsX/BachelorThesis/assets/79597633/26bfc996-7288-4396-b321-167102851cbb">
 
